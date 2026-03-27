@@ -2,72 +2,112 @@
 <html>
 <head>
     <title>Jezreel Gito Portfolio</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             background-color: #f4f6f9;
-            color: #333;
         }
 
+        /* NAVBAR */
+        nav {
+            background: #111;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00ccff;
+        }
+
+        /* HEADER */
         header {
-            background-color: #0066cc;
+            background: linear-gradient(to right, #0066cc, #00ccff);
             color: white;
             text-align: center;
-            padding: 30px 10px;
+            padding: 40px 10px;
         }
 
-        header h1 {
-            margin: 0;
-        }
-
+        /* CONTAINER */
         .container {
             width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 900px;
+            margin: auto;
         }
 
+        /* CARD STYLE */
         .card {
             background: white;
             padding: 20px;
-            margin-bottom: 20px;
+            margin: 20px 0;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* HOVER EFFECT */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
         h2 {
             color: #0066cc;
         }
 
-        ul {
-            padding-left: 20px;
+        /* IMAGE HOVER */
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
         }
 
         footer {
+            background: #111;
+            color: white;
             text-align: center;
             padding: 15px;
-            background: #222;
-            color: white;
-            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+<nav>
+    <a href="#">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#work">My Work</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HEADER -->
 <header>
     <h1>Jezreel Gito</h1>
-    <p>IT Enthusiast | Web Learner | Editor</p>
+    <p>IT Enthusiast | Web Developer | Editor</p>
 </header>
 
 <div class="container">
 
     <div class="card">
         <h2>About Me</h2>
-        <p>Hello! I am a Diploma graduate in Business Studies (Computing). I am passionate about technology, website development, and digital editing.</p>
+        <p>I am a Diploma graduate in Business Studies (Computing) with a passion for technology, web development, and digital editing. I am eager to grow and work in an IT environment.</p>
     </div>
 
-    <div class="card">
+    <div class="card" id="skills">
         <h2>Skills</h2>
         <ul>
             <li>Microsoft Word & Excel</li>
@@ -77,22 +117,22 @@
         </ul>
     </div>
 
-    <div class="card">
+    <div class="card" id="projects">
         <h2>Projects</h2>
         <p>• Created simple websites using HTML</p>
         <p>• Edited and shared digital images on social media</p>
     </div>
 
-    <div class="card">
-    <h2>My Work</h2>
-    <div style="display:flex; gap:10px;">
-        <img src="edit1.jpg" width="33%" style="border-radius:8px;">
-        <img src="edit2.jpg" width="33%" style="border-radius:8px;">
-        <img src="edit3.png" width="33%" style="border-radius:8px;">
-    </div>
+    <div class="card gallery" id="work">
+        <h2>My Work</h2>
+        <img src="edit1.jpg">
+        <br><br>
+        <img src="edit2.jpg">
+        <br><br>
+        <img src="edit3.png">
     </div>
 
-    <div class="card">
+    <div class="card" id="contact">
         <h2>Contact</h2>
         <p>Email: jezreel78@gmail.com</p>
         <p>Phone: 74609568</p>
@@ -105,4 +145,4 @@
 </footer>
 
 </body>
-          </html>
+</html>
