@@ -94,6 +94,121 @@
 .profile-pic:hover {
     transform: scale(1.1);
         }
+
+/* MY WORK HORIZONTAL SCROLL */
+.work-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 5px 15px;
+}
+
+.work-scroll::-webkit-scrollbar {
+    height: 10px;
+}
+
+.work-scroll::-webkit-scrollbar-thumb {
+    background: #bfc7d1;
+    border-radius: 10px;
+}
+
+.work-item {
+    min-width: 280px;
+    max-width: 280px;
+    flex: 0 0 auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover,
+.work-item:active,
+.work-item:focus-within {
+    transform: scale(1.04);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+}
+
+.work-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.work-item:hover img,
+.work-item:active img,
+.work-item:focus-within img {
+    transform: scale(1.05);
+}
+
+.work-info {
+    padding: 14px;
+    text-align: center;
+}
+
+.work-info h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #0066cc;
+}
+
+.work-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.work-actions a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn {
+    background: #0066cc;
+    color: white;
+}
+
+.download-btn:hover {
+    background: #004c99;
+    transform: translateY(-2px);
+}
+
+.link-btn {
+    background: #f0f4f8;
+    color: #222;
+}
+
+.link-btn:hover {
+    background: #dfe8f1;
+    transform: translateY(-2px);
+}
+
+/* optional small note */
+.work-note {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    .work-item {
+        min-width: 240px;
+        max-width: 240px;
+    }
+
+    .work-item img {
+        height: 190px;
+    }
+}
     </style>
 </head>
 
@@ -154,14 +269,81 @@ function closeImage() {
         <p>• Edited and shared digital images on social media</p>
     </div>
 
-    <div class="card gallery" id="work">
-        <h2>My Work</h2>
-        <img src="edit1.jpg">
-        <br><br>
-        <img src="edit2.jpg">
-        <br><br>
-        <img src="edit3.png">
+    <div class="card" id="work">
+    <h2>My Work</h2>
+
+    <div class="work-scroll">
+
+        <div class="work-item">
+            <img src="brochure.jpg" alt="Brochure Project">
+            <div class="work-info">
+                <h3>Brochure Design</h3>
+                <div class="work-actions">
+                    <a href="brochure.pdf" download class="download-btn">Download Original</a>
+                    <a href="https://your-other-website-link.com" target="_blank" class="link-btn">View Related Website</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <img src="edit1.jpg" alt="Photo Editing Project">
+            <div class="work-info">
+                <h3>Photo Edit Project</h3>
+                <div class="work-actions">
+                    <a href="edit1.jpg" download class="download-btn">Download Original</a>
+                    <a href="https://your-other-website-link.com" target="_blank" class="link-btn">View Related Website</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <img src="edit3.jpg" alt="Photo Editing Project">
+            <div class="work-info">
+                <h3>Photo Edit Project</h3>
+                <div class="work-actions">
+                    <a href="edit3.jpg" download class="download-btn">Download Original</a>
+                    <a href="https://your-other-website-link.com" target="_blank" class="link-btn">View Related Website</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <img src="edit2.jpg" alt="Photo Editing Project">
+            <div class="work-info">
+                <h3>Photo Edit Project</h3>
+                <div class="work-actions">
+                    <a href="edit2.jpg" download class="download-btn">Download Original</a>
+                    <a href="https://your-other-website-link.com" target="_blank" class="link-btn">View Related Website</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <img src="calendar.jpg" alt="Calendar Design Project">
+            <div class="work-info">
+                <h3>Calendar Design</h3>
+                <div class="work-actions">
+                    <a href="calendar.pdf" download class="download-btn">Download Original</a>
+                    <a href="https://your-other-website-link.com" target="_blank" class="link-btn">View Related Website</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <img src="webpage.jpg" alt="Website Project">
+            <div class="work-info">
+                <h3>Website Project</h3>
+                <div class="work-actions">
+                    <a href="website-files.zip" download class="download-btn">Download Original</a>
+                    <a href="https://mangkah.github.io/KBC-BLOG2/" target="_blank" class="link-btn">Visit Website</a>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    <p class="work-note">Swipe left or right to view more projects.</p>
+                    </div>
 
     <div class="card" id="contact">
         <h2>Contact</h2>
